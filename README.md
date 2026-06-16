@@ -92,9 +92,15 @@ python -m pytest tests/
 
 ## Sample data — what messy conditions are injected
 
-The generator produces ~200 clean records across 5 devices reporting every
-5 minutes, then deliberately injects ~26 problem records so the pipeline's
-handling is visible. Each injected category and how the pipeline handles it:
+The generator produces ~200 clean records across 5 devices, each with its own
+timeline. Values drift realistically between readings — temperature wanders
+gradually, battery drains slowly, signal fluctuates — so consecutive readings
+from the same device are correlated, not random. This makes rate-of-change
+alerting meaningful: a sudden spike stands out against a smooth baseline.
+
+On top of the clean data, the generator deliberately injects ~30 problem
+records so the pipeline's handling is visible. Each injected category and how
+the pipeline handles it:
 
 | Injected condition        | Example                                      | How the pipeline handles it                          |
 |---------------------------|----------------------------------------------|------------------------------------------------------|
@@ -107,11 +113,14 @@ handling is visible. Each injected category and how the pipeline handles it:
 | Duplicate records         | an exact copy of an existing reading         | Removed, counted as `duplicate`                      |
 | Out-of-order timestamps   | a reading time-stamped before the run start  | Accepted; records are sorted by time before use      |
 | Anomalous-but-valid       | `temperature: 78`, `battery: 5`              | Accepted — these are valid readings that trip alerts |
+| Rate-of-change spikes     | temp jumps 30°C in 5 min, battery drops 35%  | Accepted — flagged by `anomalous_temp/battery_change` alerts |
 
-The last category is deliberate: a dangerously hot reading or a near-empty
-battery is **not** a data error — it is exactly the kind of valid reading the
+The last two categories are deliberate: a dangerously hot reading or a sudden
+spike is **not** a data error — it is exactly the kind of valid reading the
 **alerting** layer should catch. Injecting these proves the alerts fire on
-real, in-range data, not only on garbage.
+real, in-range data, not only on garbage. The rate-of-change spikes work
+because clean data drifts smoothly, so a 6°C/min jump is unmistakably
+anomalous against a baseline that never exceeds 0.3°C/min.
 
 ---
 
@@ -135,6 +144,14 @@ read, tested, and changed in isolation.
   and "latest" and "gap" calculations are always correct.
 - **`aggregator.py`** and **`alert.py`** are siblings that each take the
   grouped data and produce their own result, with no dependency on each other.
+  The alerter checks five conditions: low battery, temperature out of safe
+  range, rate-of-change anomalies, **device offline**, and **recovered gaps**.
+  The offline/recovered distinction uses the latest timestamp across all
+  devices as a proxy for "now" — if a device's last reading is stale relative
+  to that, it is offline; if it had a gap but resumed, it is a recovered gap.
+  Rate-of-change detection and gap analysis both live in the alerter (not the
+  validator) because they need consecutive readings from the same device, which
+  only exist after grouping and sorting.
 - **`output.py`** is the only module that writes to disk / prints, keeping I/O
   out of the processing logic.
 - **`config.py`** centralizes every tunable value — valid ranges, alert
@@ -153,8 +170,8 @@ ever fire on valid data.
 ## Example run
 
 ```
-Records read     : 226
-Records accepted : 206
+Records read     : 230
+Records accepted : 210
 Records rejected : 20
   Rejected by reason:
     - duplicate: 4
@@ -164,12 +181,19 @@ Records rejected : 20
     - missing_field: 6
     - out_of_range: 6
 Devices summarized: 5
-Alerts generated  : 8
+Alerts generated  : 16
   Alerts:
+    - DEV_001: temperature_out_of_range {'min_temp': 48.77, 'max_temp': 78.0}
+    - DEV_001: reporting_gap_recovered {'max_gap_minutes': 1805.0}
     - DEV_002: low_battery {'latest_battery': 5.0}
-    - DEV_001: temperature_out_of_range {'min_temp': 20.02, 'max_temp': 78.0}
-    - DEV_005: low_battery {'latest_battery': 19.89}
-    - ... (reporting_gap alerts per device)
+    - DEV_002: reporting_gap_recovered {'max_gap_minutes': 1810.0}
+    - DEV_003: anomalous_temp_change {'from': 25.0, 'to': 36.98, ...}
+    - DEV_003: device_offline {'last_seen': '2026-06-01T03:15:00', ...}
+    - DEV_004: anomalous_temp_change {'from': 30.0, 'to': 63.31, ...}
+    - DEV_004: device_offline {'last_seen': '2026-06-01T03:15:00', ...}
+    - DEV_004: reporting_gap_recovered {'max_gap_minutes': 470.0}
+    - DEV_005: device_offline {'last_seen': '2026-06-01T03:15:00', ...}
+    - ... (+ rate-of-change alerts for DEV_003, DEV_004)
 ```
 
 The full per-device summary and the complete alert list are written to
@@ -188,9 +212,9 @@ The full per-device summary and the complete alert list are written to
 - **Exact-match de-duplication.** Two readings are duplicates only if every
   field matches. A real system might treat "same device + same timestamp" as a
   duplicate even if a value differs slightly.
-- **Gap detection is per-pair.** It flags the largest gap between consecutive
-  readings. It does not yet distinguish a device that stopped *now* from one
-  that had a gap earlier and recovered.
+- **"Now" is inferred.** Device-offline detection uses the latest timestamp
+  across all devices as a proxy for the current time, which works for batch
+  runs but would need a real clock in a streaming system.
 
 ## What I would build next
 
@@ -204,6 +228,64 @@ The full per-device summary and the complete alert list are written to
 
 ---
 
+## Walkthrough
+
+### What I built
+
+A batch telemetry pipeline that takes a JSON file of device sensor readings —
+some clean, some deliberately messy — and produces a per-device health summary
+plus actionable alerts. The entry point is `main.py`; one command generates
+sample data and runs the full pipeline:
+
+```bash
+python main.py --generate
+```
+
+The pipeline flows through five stages, each in its own module:
+**ingest → validate & clean → group & sort → aggregate → alert → output.**
+
+### How messy data is handled
+
+The generator injects ~30 problem records into ~200 clean ones: missing fields,
+wrong types, out-of-range values, null device IDs, bad timestamps, garbage
+strings, exact duplicates, and rate-of-change spikes. The validator catches
+each invalid category with a specific rejection reason, so the run summary
+shows *why* records were dropped, not just how many. Checks run cheapest-first
+(is-it-a-dict before field access) so a garbage string never crashes a
+downstream check.
+
+Two key design choices make the alerting layer meaningful:
+
+1. The **valid sensor range** (what the validator accepts) is wider than the
+   **normal operating band** (what the generator produces). This means a
+   dangerously hot reading like 78°C passes validation but triggers a
+   temperature alert — proving alerts fire on real, in-range data, not only on
+   garbage the validator already removed.
+2. Clean data uses **correlated, drifting values** (not random), so
+   rate-of-change alerts only fire on the deliberately injected spikes. A
+   30°C jump in 5 minutes is unmistakable against a baseline that drifts at
+   most 1.5°C per reading.
+
+### Assumptions
+
+- **Batch is acceptable.** The brief says a single batch read is fine; the
+  stage separation means a streaming ingest could replace `ingest.py` without
+  touching validation or aggregation.
+- **Exact-match dedup.** Two records are duplicates only if every field matches.
+  A production system might treat same-device-same-timestamp as a duplicate
+  even with slightly different values.
+- **"Now" is inferred.** Device-offline detection compares each device's last
+  reading against the latest timestamp across all devices. This works for
+  batch runs but would need a real clock in a streaming system.
+
+### What I would do next
+
+With more time I would add true streaming ingest, SQLite persistence so history
+survives across runs, a small dashboard charting readings over time with alerts
+marked, and richer alert semantics (severity levels, alert deduplication).
+
+---
+
 ## AI tools used
 
 An AI coding assistant (Claude) was used as a pair-programming aid to discuss
@@ -213,5 +295,5 @@ me; I can explain any part of the submission.
 
 ## Effort
 
-Roughly **[FILL IN] hours** end to end, including design, implementation,
+Roughly **3 hours** end to end, including design, implementation,
 testing, and documentation.

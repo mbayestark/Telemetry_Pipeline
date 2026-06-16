@@ -36,3 +36,8 @@ BATTERY_THRESHOLD = 20.0     # alert if latest battery below this (percent)
 TEMP_HIGH_THRESHOLD = 75.0   # alert if any reading above this (celsius)
 TEMP_LOW_THRESHOLD = 10.0    # alert if any reading below this (celsius)
 MAX_GAP_MINUTES = 30.0       # alert if gap between readings exceeds this (minutes)
+
+# Rate-of-change thresholds — flag physically implausible jumps between
+# consecutive readings, even when both values are individually in range.
+MAX_TEMP_CHANGE_PER_MINUTE = 2.0    # °C per minute
+MAX_BATTERY_CHANGE_PER_MINUTE = 1.0 # % per minute

@@ -1,57 +1,72 @@
 {
   "device_summary": {
-    "DEV_002": {
-      "reading_count": 37,
-      "min_temperature": 19.42,
-      "max_temperature": 68.6,
-      "avg_temperature": 44.24,
-      "latest_battery": 5.0,
-      "first_reading": "2026-06-01T00:00:00",
-      "last_reading": "2026-06-02T09:25:00",
-      "time_span_minutes": 2005.0
-    },
     "DEV_001": {
-      "reading_count": 43,
-      "min_temperature": 18.71,
+      "reading_count": 41,
+      "min_temperature": 48.77,
       "max_temperature": 78.0,
-      "avg_temperature": 44.79,
+      "avg_temperature": 53.55,
       "latest_battery": 60.0,
-      "first_reading": "2026-05-31T15:40:00",
+      "first_reading": "2026-06-01T00:00:00",
       "last_reading": "2026-06-02T09:20:00",
-      "time_span_minutes": 2500.0
+      "time_span_minutes": 2000.0
     },
-    "DEV_004": {
-      "reading_count": 37,
-      "min_temperature": 18.68,
-      "max_temperature": 66.58,
-      "avg_temperature": 41.7,
-      "latest_battery": 28.61,
-      "first_reading": "2026-06-01T00:15:00",
-      "last_reading": "2026-06-01T16:35:00",
-      "time_span_minutes": 980.0
-    },
-    "DEV_005": {
-      "reading_count": 47,
-      "min_temperature": 18.24,
-      "max_temperature": 69.32,
-      "avg_temperature": 48.35,
-      "latest_battery": 11.92,
-      "first_reading": "2026-06-01T00:20:00",
-      "last_reading": "2026-06-01T16:10:00",
-      "time_span_minutes": 950.0
+    "DEV_002": {
+      "reading_count": 44,
+      "min_temperature": 35.0,
+      "max_temperature": 49.34,
+      "avg_temperature": 45.55,
+      "latest_battery": 5.0,
+      "first_reading": "2026-05-31T15:40:00",
+      "last_reading": "2026-06-02T09:25:00",
+      "time_span_minutes": 2505.0
     },
     "DEV_003": {
       "reading_count": 42,
-      "min_temperature": 18.82,
-      "max_temperature": 65.7,
-      "avg_temperature": 44.25,
-      "latest_battery": 64.63,
-      "first_reading": "2026-05-31T15:50:00",
-      "last_reading": "2026-06-01T16:30:00",
-      "time_span_minutes": 1480.0
+      "min_temperature": 25.0,
+      "max_temperature": 55.0,
+      "avg_temperature": 35.9,
+      "latest_battery": 75.6,
+      "first_reading": "2026-06-01T00:00:00",
+      "last_reading": "2026-06-01T03:15:00",
+      "time_span_minutes": 195.0
+    },
+    "DEV_004": {
+      "reading_count": 43,
+      "min_temperature": 30.0,
+      "max_temperature": 67.09,
+      "avg_temperature": 62.78,
+      "latest_battery": 78.41,
+      "first_reading": "2026-05-31T16:10:00",
+      "last_reading": "2026-06-01T03:15:00",
+      "time_span_minutes": 665.0
+    },
+    "DEV_005": {
+      "reading_count": 40,
+      "min_temperature": 35.95,
+      "max_temperature": 42.95,
+      "avg_temperature": 38.67,
+      "latest_battery": 60.72,
+      "first_reading": "2026-06-01T00:00:00",
+      "last_reading": "2026-06-01T03:15:00",
+      "time_span_minutes": 195.0
     }
   },
   "alerts": [
+    {
+      "device_id": "DEV_001",
+      "alert_type": "temperature_out_of_range",
+      "details": {
+        "min_temp": 48.77,
+        "max_temp": 78.0
+      }
+    },
+    {
+      "device_id": "DEV_001",
+      "alert_type": "reporting_gap_recovered",
+      "details": {
+        "max_gap_minutes": 1805.0
+      }
+    },
     {
       "device_id": "DEV_002",
       "alert_type": "low_battery",
@@ -61,52 +76,120 @@
     },
     {
       "device_id": "DEV_002",
-      "alert_type": "reporting_gap",
+      "alert_type": "reporting_gap_recovered",
       "details": {
-        "max_gap_minutes": 1050.0
-      }
-    },
-    {
-      "device_id": "DEV_001",
-      "alert_type": "temperature_out_of_range",
-      "details": {
-        "min_temp": 18.71,
-        "max_temp": 78.0
-      }
-    },
-    {
-      "device_id": "DEV_001",
-      "alert_type": "reporting_gap",
-      "details": {
-        "max_gap_minutes": 1015.0
-      }
-    },
-    {
-      "device_id": "DEV_004",
-      "alert_type": "reporting_gap",
-      "details": {
-        "max_gap_minutes": 135.0
-      }
-    },
-    {
-      "device_id": "DEV_005",
-      "alert_type": "low_battery",
-      "details": {
-        "latest_battery": 11.92
-      }
-    },
-    {
-      "device_id": "DEV_005",
-      "alert_type": "reporting_gap",
-      "details": {
-        "max_gap_minutes": 55.0
+        "max_gap_minutes": 1810.0
       }
     },
     {
       "device_id": "DEV_003",
-      "alert_type": "reporting_gap",
+      "alert_type": "anomalous_temp_change",
       "details": {
-        "max_gap_minutes": 510.0
+        "from": 25.0,
+        "to": 36.98,
+        "rate_per_min": 2.4,
+        "interval_minutes": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_003",
+      "alert_type": "anomalous_battery_change",
+      "details": {
+        "from": 90.0,
+        "to": 72.98,
+        "rate_per_min": 3.4,
+        "interval_minutes": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_003",
+      "alert_type": "anomalous_temp_change",
+      "details": {
+        "from": 55.0,
+        "to": 38.13,
+        "rate_per_min": 3.37,
+        "interval_minutes": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_003",
+      "alert_type": "anomalous_battery_change",
+      "details": {
+        "from": 90.0,
+        "to": 72.83,
+        "rate_per_min": 3.43,
+        "interval_minutes": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_003",
+      "alert_type": "device_offline",
+      "details": {
+        "last_seen": "2026-06-01T03:15:00",
+        "silent_minutes": 1810.0
+      }
+    },
+    {
+      "device_id": "DEV_004",
+      "alert_type": "anomalous_temp_change",
+      "details": {
+        "from": 30.0,
+        "to": 63.31,
+        "rate_per_min": 6.66,
+        "interval_minutes": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_004",
+      "alert_type": "anomalous_battery_change",
+      "details": {
+        "from": 85.0,
+        "to": 78.33,
+        "rate_per_min": 1.33,
+        "interval_minutes": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_004",
+      "alert_type": "anomalous_temp_change",
+      "details": {
+        "from": 30.0,
+        "to": 63.18,
+        "rate_per_min": 6.64,
+        "interval_minutes": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_004",
+      "alert_type": "anomalous_battery_change",
+      "details": {
+        "from": 50.0,
+        "to": 78.81,
+        "rate_per_min": 5.76,
+        "interval_minutes": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_004",
+      "alert_type": "device_offline",
+      "details": {
+        "last_seen": "2026-06-01T03:15:00",
+        "silent_minutes": 1810.0
+      }
+    },
+    {
+      "device_id": "DEV_004",
+      "alert_type": "reporting_gap_recovered",
+      "details": {
+        "max_gap_minutes": 470.0
+      }
+    },
+    {
+      "device_id": "DEV_005",
+      "alert_type": "device_offline",
+      "details": {
+        "last_seen": "2026-06-01T03:15:00",
+        "silent_minutes": 1810.0
       }
     }
   ]

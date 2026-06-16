@@ -1,1437 +1,1437 @@
 [
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:00:00",
-    "temperature": 37.79,
-    "battery": 95.64,
-    "signal_strength": -67.67
+    "temperature": 50.42,
+    "battery": 61.25,
+    "signal_strength": -67.94
   },
   {
     "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:05:00",
-    "temperature": 40.74,
-    "battery": 96.96,
-    "signal_strength": -70.61
+    "temperature": 51.6,
+    "battery": 60.59,
+    "signal_strength": -68.41
   },
   {
     "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:10:00",
-    "temperature": 41.81,
-    "battery": 86.34,
-    "signal_strength": -76.24
+    "temperature": 50.19,
+    "battery": 60.14,
+    "signal_strength": -68.38
   },
   {
-    "device_id": "DEV_004",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:15:00",
-    "temperature": 44.76,
-    "battery": 67.31,
-    "signal_strength": -50.29
+    "temperature": 48.77,
+    "battery": 59.66,
+    "signal_strength": -67.48
   },
   {
-    "device_id": "DEV_005",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:20:00",
-    "temperature": 56.44,
-    "battery": 62.91,
-    "signal_strength": -25.21
+    "temperature": 48.9,
+    "battery": 59.21,
+    "signal_strength": -66.94
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:25:00",
-    "temperature": 31.35,
-    "battery": 35.91,
-    "signal_strength": -46.29
+    "temperature": 49.83,
+    "battery": 58.42,
+    "signal_strength": -65.11
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:30:00",
-    "temperature": 31.97,
-    "battery": 4.4,
-    "signal_strength": -37.65
+    "temperature": 50.42,
+    "battery": 58.16,
+    "signal_strength": -67.18
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:35:00",
-    "temperature": 39.38,
-    "battery": 61.42,
-    "signal_strength": -86.31
+    "temperature": 51.79,
+    "battery": 57.9,
+    "signal_strength": -69.62
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:40:00",
-    "temperature": 44.19,
-    "battery": 61.05,
-    "signal_strength": -115.84
+    "temperature": 50.58,
+    "battery": 58.46,
+    "signal_strength": -69.0
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:45:00",
-    "temperature": 67.06,
-    "battery": 42.53,
-    "signal_strength": -102.75
+    "temperature": 51.5,
+    "battery": 58.83,
+    "signal_strength": -68.78
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:50:00",
-    "temperature": 58.37,
-    "battery": 19.89,
-    "signal_strength": -5.73
+    "temperature": 52.92,
+    "battery": 58.64,
+    "signal_strength": -68.47
   },
   {
     "device_id": "DEV_001",
     "timestamp": "2026-06-01T00:55:00",
-    "temperature": 34.41,
-    "battery": 61.62,
-    "signal_strength": -54.92
+    "temperature": 53.91,
+    "battery": 58.83,
+    "signal_strength": -66.3
   },
   {
-    "device_id": "DEV_005",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:00:00",
-    "temperature": 46.97,
-    "battery": 86.13,
-    "signal_strength": -48.39
+    "temperature": 54.14,
+    "battery": 59.16,
+    "signal_strength": -69.03
   },
   {
-    "device_id": "DEV_004",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:05:00",
-    "temperature": 51.0,
-    "battery": 79.55,
-    "signal_strength": -62.79
+    "temperature": 53.32,
+    "battery": 58.82,
+    "signal_strength": -71.55
   },
   {
-    "device_id": "DEV_005",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:10:00",
-    "temperature": 23.79,
-    "battery": 6.67,
-    "signal_strength": -52.04
+    "temperature": 52.52,
+    "battery": 58.18,
+    "signal_strength": -72.88
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:15:00",
-    "temperature": 64.24,
-    "battery": 55.37,
-    "signal_strength": -49.82
+    "temperature": 52.93,
+    "battery": 57.96,
+    "signal_strength": -73.66
   },
   {
-    "device_id": "DEV_005",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:20:00",
-    "temperature": 57.6,
-    "battery": 48.7,
-    "signal_strength": -81.35
+    "temperature": 52.06,
+    "battery": 57.59,
+    "signal_strength": -71.04
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:25:00",
-    "temperature": 42.3,
-    "battery": 89.76,
-    "signal_strength": -69.01
+    "temperature": 52.5,
+    "battery": 57.76,
+    "signal_strength": -73.01
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:30:00",
-    "temperature": 36.52,
-    "battery": 67.87,
-    "signal_strength": -109.56
+    "temperature": 53.19,
+    "battery": 57.22,
+    "signal_strength": -73.73
   },
   {
     "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:35:00",
-    "temperature": 27.42,
-    "battery": 13.41,
-    "signal_strength": -97.01
+    "temperature": 54.66,
+    "battery": 57.44,
+    "signal_strength": -73.39
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:40:00",
-    "temperature": 62.78,
-    "battery": 54.69,
-    "signal_strength": -8.96
+    "temperature": 55.21,
+    "battery": 57.99,
+    "signal_strength": -71.73
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:45:00",
-    "temperature": 36.51,
-    "battery": 47.22,
-    "signal_strength": -118.09
+    "temperature": 54.4,
+    "battery": 57.24,
+    "signal_strength": -72.84
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:50:00",
-    "temperature": 18.82,
-    "battery": 92.91,
-    "signal_strength": -43.29
+    "temperature": 53.7,
+    "battery": 56.78,
+    "signal_strength": -70.18
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T01:55:00",
-    "temperature": 41.51,
-    "battery": 97.64,
-    "signal_strength": -30.95
+    "temperature": 54.83,
+    "battery": 56.48,
+    "signal_strength": -69.25
   },
   {
-    "device_id": "DEV_005",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:00:00",
-    "temperature": 44.69,
-    "battery": 57.68,
-    "signal_strength": -98.49
+    "temperature": 54.52,
+    "battery": 57.14,
+    "signal_strength": -69.5
   },
   {
-    "device_id": "DEV_004",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:05:00",
-    "temperature": 55.97,
-    "battery": 77.28,
-    "signal_strength": -59.66
+    "temperature": 53.81,
+    "battery": 56.73,
+    "signal_strength": -69.13
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:10:00",
-    "temperature": 25.89,
-    "battery": 92.28,
-    "signal_strength": -73.98
+    "temperature": 53.1,
+    "battery": 56.87,
+    "signal_strength": -66.74
   },
   {
-    "device_id": "DEV_005",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:15:00",
-    "temperature": 46.98,
-    "battery": 38.8,
-    "signal_strength": -3.0
+    "temperature": 52.8,
+    "battery": 56.42,
+    "signal_strength": -63.75
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:20:00",
-    "temperature": 43.66,
-    "battery": 30.96,
-    "signal_strength": -17.48
+    "temperature": 52.83,
+    "battery": 55.77,
+    "signal_strength": -66.47
   },
   {
-    "device_id": "DEV_004",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:25:00",
-    "temperature": 23.73,
-    "battery": 14.88,
-    "signal_strength": -0.67
+    "temperature": 51.66,
+    "battery": 55.97,
+    "signal_strength": -64.72
   },
   {
-    "device_id": "DEV_004",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:30:00",
-    "temperature": 48.67,
-    "battery": 54.38,
-    "signal_strength": -47.51
+    "temperature": 51.43,
+    "battery": 55.27,
+    "signal_strength": -65.43
   },
   {
     "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:35:00",
-    "temperature": 38.32,
-    "battery": 4.93,
-    "signal_strength": -28.81
+    "temperature": 52.92,
+    "battery": 55.32,
+    "signal_strength": -62.6
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:40:00",
-    "temperature": 29.28,
-    "battery": 41.67,
-    "signal_strength": -43.96
+    "temperature": 54.0,
+    "battery": 54.54,
+    "signal_strength": -61.28
   },
   {
-    "device_id": "DEV_004",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:45:00",
-    "temperature": 52.52,
-    "battery": 34.05,
-    "signal_strength": -30.5
+    "temperature": 54.55,
+    "battery": 54.6,
+    "signal_strength": -62.68
   },
   {
-    "device_id": "DEV_004",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:50:00",
-    "temperature": 24.94,
-    "battery": 77.18,
-    "signal_strength": -19.66
+    "temperature": 54.97,
+    "battery": 53.98,
+    "signal_strength": -63.07
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T02:55:00",
-    "temperature": 61.5,
-    "battery": 16.37,
-    "signal_strength": -77.73
+    "temperature": 54.83,
+    "battery": 54.71,
+    "signal_strength": -60.81
   },
   {
-    "device_id": "DEV_005",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T03:00:00",
-    "temperature": 31.9,
-    "battery": 89.79,
-    "signal_strength": -43.07
+    "temperature": 54.12,
+    "battery": 54.71,
+    "signal_strength": -62.74
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T03:05:00",
-    "temperature": 42.69,
-    "battery": 62.59,
-    "signal_strength": -30.78
+    "temperature": 55.36,
+    "battery": 55.3,
+    "signal_strength": -63.95
   },
   {
     "device_id": "DEV_001",
     "timestamp": "2026-06-01T03:10:00",
-    "temperature": 32.97,
-    "battery": 57.29,
-    "signal_strength": -48.28
+    "temperature": 55.78,
+    "battery": 55.47,
+    "signal_strength": -66.03
+  },
+  {
+    "device_id": "DEV_001",
+    "timestamp": "2026-06-01T03:15:00",
+    "temperature": 56.57,
+    "battery": 55.53,
+    "signal_strength": -64.36
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:00:00",
+    "temperature": 44.14,
+    "battery": 60.71,
+    "signal_strength": -64.76
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:05:00",
+    "temperature": 45.13,
+    "battery": 60.4,
+    "signal_strength": -67.41
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:10:00",
+    "temperature": 46.26,
+    "battery": 61.12,
+    "signal_strength": -69.9
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:15:00",
+    "temperature": 46.22,
+    "battery": 60.43,
+    "signal_strength": -68.34
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:20:00",
+    "temperature": 47.02,
+    "battery": 59.84,
+    "signal_strength": -68.49
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:25:00",
+    "temperature": 47.17,
+    "battery": 59.46,
+    "signal_strength": -66.26
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:30:00",
+    "temperature": 46.94,
+    "battery": 59.0,
+    "signal_strength": -66.02
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:35:00",
+    "temperature": 47.63,
+    "battery": 58.52,
+    "signal_strength": -67.15
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:40:00",
+    "temperature": 49.12,
+    "battery": 58.76,
+    "signal_strength": -67.52
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:45:00",
+    "temperature": 49.17,
+    "battery": 58.15,
+    "signal_strength": -69.17
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:50:00",
+    "temperature": 48.68,
+    "battery": 58.29,
+    "signal_strength": -70.79
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:55:00",
+    "temperature": 47.84,
+    "battery": 57.6,
+    "signal_strength": -70.0
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:00:00",
+    "temperature": 47.03,
+    "battery": 58.25,
+    "signal_strength": -67.84
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:05:00",
+    "temperature": 45.74,
+    "battery": 57.83,
+    "signal_strength": -66.83
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:10:00",
+    "temperature": 44.88,
+    "battery": 57.24,
+    "signal_strength": -64.22
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:15:00",
+    "temperature": 45.09,
+    "battery": 57.2,
+    "signal_strength": -62.51
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:20:00",
+    "temperature": 46.01,
+    "battery": 56.7,
+    "signal_strength": -64.93
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:25:00",
+    "temperature": 45.8,
+    "battery": 56.58,
+    "signal_strength": -65.13
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:30:00",
+    "temperature": 46.49,
+    "battery": 56.86,
+    "signal_strength": -62.23
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:35:00",
+    "temperature": 45.29,
+    "battery": 56.7,
+    "signal_strength": -63.19
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:40:00",
+    "temperature": 46.38,
+    "battery": 56.3,
+    "signal_strength": -65.05
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:45:00",
+    "temperature": 46.23,
+    "battery": 56.18,
+    "signal_strength": -66.38
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:50:00",
+    "temperature": 45.48,
+    "battery": 56.86,
+    "signal_strength": -66.72
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T01:55:00",
+    "temperature": 46.56,
+    "battery": 56.94,
+    "signal_strength": -69.42
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:00:00",
+    "temperature": 48.06,
+    "battery": 57.48,
+    "signal_strength": -66.61
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:05:00",
+    "temperature": 49.34,
+    "battery": 58.04,
+    "signal_strength": -68.61
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:10:00",
+    "temperature": 49.3,
+    "battery": 57.58,
+    "signal_strength": -69.2
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:15:00",
+    "temperature": 47.98,
+    "battery": 57.39,
+    "signal_strength": -66.29
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:20:00",
+    "temperature": 47.28,
+    "battery": 57.84,
+    "signal_strength": -66.56
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:25:00",
+    "temperature": 47.05,
+    "battery": 58.57,
+    "signal_strength": -63.59
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:30:00",
+    "temperature": 47.22,
+    "battery": 58.92,
+    "signal_strength": -65.66
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:35:00",
+    "temperature": 46.61,
+    "battery": 59.67,
+    "signal_strength": -65.18
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:40:00",
+    "temperature": 46.74,
+    "battery": 60.07,
+    "signal_strength": -67.84
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:45:00",
+    "temperature": 46.99,
+    "battery": 60.07,
+    "signal_strength": -65.72
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:50:00",
+    "temperature": 45.96,
+    "battery": 60.81,
+    "signal_strength": -68.24
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T02:55:00",
+    "temperature": 45.02,
+    "battery": 60.96,
+    "signal_strength": -67.19
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T03:00:00",
+    "temperature": 44.23,
+    "battery": 60.35,
+    "signal_strength": -64.85
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T03:05:00",
+    "temperature": 43.47,
+    "battery": 60.5,
+    "signal_strength": -64.13
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T03:10:00",
+    "temperature": 43.23,
+    "battery": 60.63,
+    "signal_strength": -63.99
   },
   {
     "device_id": "DEV_002",
     "timestamp": "2026-06-01T03:15:00",
-    "temperature": 19.51,
-    "battery": 22.62,
-    "signal_strength": -88.36
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T03:20:00",
-    "temperature": 32.23,
-    "battery": 2.88,
-    "signal_strength": -79.23
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T03:25:00",
-    "temperature": 52.99,
-    "battery": 84.38,
-    "signal_strength": -14.63
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T03:30:00",
-    "temperature": 23.58,
-    "battery": 63.3,
-    "signal_strength": -49.21
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T03:35:00",
-    "temperature": 42.54,
-    "battery": 11.06,
-    "signal_strength": -103.79
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T03:40:00",
-    "temperature": 68.4,
-    "battery": 41.16,
-    "signal_strength": -28.59
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T03:45:00",
-    "temperature": 33.29,
-    "battery": 1.88,
-    "signal_strength": -106.98
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T03:50:00",
-    "temperature": 56.88,
-    "battery": 22.41,
-    "signal_strength": -53.22
+    "temperature": 44.53,
+    "battery": 60.16,
+    "signal_strength": -62.69
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T03:55:00",
-    "temperature": 32.76,
-    "battery": 82.95,
-    "signal_strength": -24.32
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T04:00:00",
-    "temperature": 43.94,
-    "battery": 62.09,
-    "signal_strength": -113.0
+    "timestamp": "2026-06-01T00:00:00",
+    "temperature": 29.81,
+    "battery": 73.56,
+    "signal_strength": -51.62
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T04:05:00",
-    "temperature": 61.1,
-    "battery": 80.01,
-    "signal_strength": -116.22
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T04:10:00",
-    "temperature": 55.51,
-    "battery": 77.54,
-    "signal_strength": -73.28
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T04:15:00",
-    "temperature": 64.77,
-    "battery": 75.94,
-    "signal_strength": -46.43
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T04:20:00",
-    "temperature": 20.89,
-    "battery": 47.28,
-    "signal_strength": -35.21
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T04:25:00",
-    "temperature": 38.57,
-    "battery": 27.52,
-    "signal_strength": -50.73
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T04:30:00",
-    "temperature": 27.43,
-    "battery": 25.83,
-    "signal_strength": -70.29
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T04:35:00",
-    "temperature": 35.87,
-    "battery": 7.13,
-    "signal_strength": -108.83
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T04:40:00",
-    "temperature": 29.47,
-    "battery": 41.48,
-    "signal_strength": -67.14
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T04:45:00",
-    "temperature": 68.76,
-    "battery": 18.93,
-    "signal_strength": -76.1
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T04:50:00",
-    "temperature": 57.26,
-    "battery": 21.85,
-    "signal_strength": -6.66
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T04:55:00",
-    "temperature": 38.85,
-    "battery": 10.49,
-    "signal_strength": -79.25
+    "timestamp": "2026-06-01T00:05:00",
+    "temperature": 28.53,
+    "battery": 73.49,
+    "signal_strength": -48.63
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T05:00:00",
-    "temperature": 53.99,
-    "battery": 97.89,
-    "signal_strength": -43.68
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T05:05:00",
-    "temperature": 59.36,
-    "battery": 59.15,
-    "signal_strength": -111.48
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T05:10:00",
-    "temperature": 66.4,
-    "battery": 34.63,
-    "signal_strength": -96.99
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T05:15:00",
-    "temperature": 19.47,
-    "battery": 45.22,
-    "signal_strength": -8.88
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T05:20:00",
-    "temperature": 69.32,
-    "battery": 73.26,
-    "signal_strength": -4.69
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T05:25:00",
-    "temperature": 27.39,
-    "battery": 93.13,
-    "signal_strength": -36.84
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T05:30:00",
-    "temperature": 27.96,
-    "battery": 33.01,
-    "signal_strength": -26.05
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T05:35:00",
-    "temperature": 67.56,
-    "battery": 21.45,
-    "signal_strength": -19.91
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T05:40:00",
-    "temperature": 68.6,
-    "battery": 71.89,
-    "signal_strength": -59.74
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T05:45:00",
-    "temperature": 38.91,
-    "battery": 48.22,
-    "signal_strength": -17.51
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T05:50:00",
-    "temperature": 54.78,
-    "battery": 79.6,
-    "signal_strength": -0.96
+    "timestamp": "2026-06-01T00:10:00",
+    "temperature": 30.02,
+    "battery": 72.81,
+    "signal_strength": -50.35
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T05:55:00",
-    "temperature": 56.26,
-    "battery": 3.63,
-    "signal_strength": -77.16
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T06:00:00",
-    "temperature": 38.46,
-    "battery": 99.34,
-    "signal_strength": -17.49
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T06:05:00",
-    "temperature": 26.35,
-    "battery": 82.86,
-    "signal_strength": -106.64
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T06:10:00",
-    "temperature": 24.94,
-    "battery": 16.3,
-    "signal_strength": -73.05
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T06:15:00",
-    "temperature": 28.99,
-    "battery": 48.74,
-    "signal_strength": -54.48
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T06:20:00",
-    "temperature": 29.26,
-    "battery": 3.74,
-    "signal_strength": -35.06
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T06:25:00",
-    "temperature": 44.17,
-    "battery": 14.91,
-    "signal_strength": -17.78
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T06:30:00",
-    "temperature": 18.71,
-    "battery": 99.04,
-    "signal_strength": -5.26
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T06:35:00",
-    "temperature": 57.67,
-    "battery": 27.91,
-    "signal_strength": -9.95
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T06:40:00",
-    "temperature": 32.41,
-    "battery": 45.21,
-    "signal_strength": -39.09
+    "timestamp": "2026-06-01T00:15:00",
+    "temperature": 29.32,
+    "battery": 73.5,
+    "signal_strength": -48.06
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T06:45:00",
-    "temperature": 21.76,
-    "battery": 42.14,
-    "signal_strength": -91.14
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T06:50:00",
-    "temperature": 47.44,
-    "battery": 61.49,
-    "signal_strength": -7.99
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T06:55:00",
-    "temperature": 18.9,
-    "battery": 95.13,
-    "signal_strength": -72.37
+    "timestamp": "2026-06-01T00:20:00",
+    "temperature": 30.46,
+    "battery": 73.29,
+    "signal_strength": -50.11
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T07:00:00",
-    "temperature": 64.9,
-    "battery": 90.94,
-    "signal_strength": -83.08
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T07:05:00",
-    "temperature": 58.68,
-    "battery": 4.47,
-    "signal_strength": -26.63
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T07:10:00",
-    "temperature": 48.49,
-    "battery": 58.38,
-    "signal_strength": -94.38
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T07:15:00",
-    "temperature": 63.49,
-    "battery": 95.67,
-    "signal_strength": -3.26
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T07:20:00",
-    "temperature": 48.29,
-    "battery": 73.77,
-    "signal_strength": -48.16
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T07:25:00",
-    "temperature": 51.68,
-    "battery": 11.78,
-    "signal_strength": -24.83
+    "timestamp": "2026-06-01T00:25:00",
+    "temperature": 31.46,
+    "battery": 73.62,
+    "signal_strength": -49.44
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T07:30:00",
-    "temperature": 65.7,
-    "battery": 1.5,
-    "signal_strength": -15.1
+    "timestamp": "2026-06-01T00:30:00",
+    "temperature": 32.92,
+    "battery": 73.87,
+    "signal_strength": -52.39
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T07:35:00",
-    "temperature": 46.52,
-    "battery": 65.09,
-    "signal_strength": -7.4
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T07:40:00",
-    "temperature": 27.72,
-    "battery": 71.16,
-    "signal_strength": -87.19
+    "timestamp": "2026-06-01T00:35:00",
+    "temperature": 33.87,
+    "battery": 73.55,
+    "signal_strength": -51.41
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T07:45:00",
-    "temperature": 54.89,
-    "battery": 48.0,
-    "signal_strength": -99.57
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T07:50:00",
-    "temperature": 25.91,
-    "battery": 81.89,
-    "signal_strength": -72.63
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T07:55:00",
-    "temperature": 25.52,
-    "battery": 33.39,
-    "signal_strength": -118.55
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T08:00:00",
-    "temperature": 68.97,
-    "battery": 2.57,
-    "signal_strength": -50.85
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T08:05:00",
-    "temperature": 55.57,
-    "battery": 7.92,
-    "signal_strength": -115.17
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T08:10:00",
-    "temperature": 57.49,
-    "battery": 21.96,
-    "signal_strength": -81.79
+    "timestamp": "2026-06-01T00:40:00",
+    "temperature": 35.19,
+    "battery": 72.96,
+    "signal_strength": -53.72
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T08:15:00",
-    "temperature": 35.23,
-    "battery": 94.37,
-    "signal_strength": -63.27
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T08:20:00",
-    "temperature": 65.74,
-    "battery": 22.27,
-    "signal_strength": -97.79
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T08:25:00",
-    "temperature": 30.32,
-    "battery": 46.77,
-    "signal_strength": -54.92
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T08:30:00",
-    "temperature": 24.93,
-    "battery": 40.97,
-    "signal_strength": -19.1
+    "timestamp": "2026-06-01T00:45:00",
+    "temperature": 34.01,
+    "battery": 73.05,
+    "signal_strength": -55.09
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T08:35:00",
-    "temperature": 55.23,
-    "battery": 71.07,
-    "signal_strength": -5.62
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T08:40:00",
-    "temperature": 44.64,
-    "battery": 28.42,
-    "signal_strength": -82.67
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T08:45:00",
-    "temperature": 62.5,
-    "battery": 76.61,
-    "signal_strength": -80.66
+    "timestamp": "2026-06-01T00:50:00",
+    "temperature": 34.32,
+    "battery": 73.4,
+    "signal_strength": -56.87
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T08:50:00",
-    "temperature": 42.71,
-    "battery": 12.5,
-    "signal_strength": -36.76
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T08:55:00",
-    "temperature": 64.72,
-    "battery": 97.99,
-    "signal_strength": -43.9
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T09:00:00",
-    "temperature": 22.18,
-    "battery": 64.78,
-    "signal_strength": -119.33
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T09:05:00",
-    "temperature": 46.21,
-    "battery": 23.48,
-    "signal_strength": -13.14
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T09:10:00",
-    "temperature": 53.73,
-    "battery": 14.64,
-    "signal_strength": -51.82
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T09:15:00",
-    "temperature": 37.7,
-    "battery": 61.51,
-    "signal_strength": -92.24
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T09:20:00",
-    "temperature": 44.37,
-    "battery": 9.48,
-    "signal_strength": -40.46
+    "timestamp": "2026-06-01T00:55:00",
+    "temperature": 34.72,
+    "battery": 73.02,
+    "signal_strength": -56.94
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T09:25:00",
-    "temperature": 20.82,
-    "battery": 78.59,
-    "signal_strength": -24.1
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T09:30:00",
-    "temperature": 21.48,
-    "battery": 88.6,
-    "signal_strength": -56.64
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T09:35:00",
-    "temperature": 54.72,
-    "battery": 37.69,
-    "signal_strength": -28.62
+    "timestamp": "2026-06-01T01:00:00",
+    "temperature": 35.94,
+    "battery": 73.57,
+    "signal_strength": -59.39
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T09:40:00",
-    "temperature": 49.95,
-    "battery": 56.2,
-    "signal_strength": -2.84
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T09:45:00",
-    "temperature": 60.97,
-    "battery": 72.45,
-    "signal_strength": -94.03
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T09:50:00",
-    "temperature": 57.51,
-    "battery": 56.35,
-    "signal_strength": -22.09
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T09:55:00",
-    "temperature": 59.45,
-    "battery": 66.43,
-    "signal_strength": -98.57
+    "timestamp": "2026-06-01T01:05:00",
+    "temperature": 35.71,
+    "battery": 73.21,
+    "signal_strength": -62.37
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T10:00:00",
-    "temperature": 63.68,
-    "battery": 24.11,
-    "signal_strength": -103.67
+    "timestamp": "2026-06-01T01:10:00",
+    "temperature": 36.52,
+    "battery": 73.43,
+    "signal_strength": -63.8
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T10:05:00",
-    "temperature": 56.55,
-    "battery": 79.74,
-    "signal_strength": -90.68
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T10:10:00",
-    "temperature": 42.39,
-    "battery": 3.34,
-    "signal_strength": -41.0
+    "timestamp": "2026-06-01T01:15:00",
+    "temperature": 37.24,
+    "battery": 73.51,
+    "signal_strength": -64.23
   },
   {
     "device_id": "DEV_003",
-    "timestamp": "2026-06-01T10:15:00",
-    "temperature": 58.3,
-    "battery": 42.88,
-    "signal_strength": -89.5
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T10:20:00",
-    "temperature": 58.17,
-    "battery": 52.5,
-    "signal_strength": -55.8
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T10:25:00",
-    "temperature": 18.24,
-    "battery": 81.05,
-    "signal_strength": -62.16
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T10:30:00",
-    "temperature": 68.4,
-    "battery": 32.12,
-    "signal_strength": -85.93
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T10:35:00",
-    "temperature": 33.79,
-    "battery": 15.32,
-    "signal_strength": -35.73
-  },
-  {
-    "device_id": "DEV_004",
-    "timestamp": "2026-06-01T10:40:00",
-    "temperature": 35.81,
-    "battery": 98.02,
+    "timestamp": "2026-06-01T01:20:00",
+    "temperature": 35.77,
+    "battery": 72.83,
     "signal_strength": -61.93
   },
   {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T10:45:00",
-    "temperature": 53.87,
-    "battery": 66.84,
-    "signal_strength": -15.94
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:25:00",
+    "temperature": 36.98,
+    "battery": 72.9,
+    "signal_strength": -59.92
   },
   {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T10:50:00",
-    "temperature": 33.43,
-    "battery": 38.65,
-    "signal_strength": -20.33
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:30:00",
+    "temperature": 37.23,
+    "battery": 72.34,
+    "signal_strength": -62.16
   },
   {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T10:55:00",
-    "temperature": 43.23,
-    "battery": 17.99,
-    "signal_strength": -35.76
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:35:00",
+    "temperature": 36.65,
+    "battery": 72.98,
+    "signal_strength": -60.38
   },
   {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T11:00:00",
-    "temperature": 19.42,
-    "battery": 68.04,
-    "signal_strength": -15.05
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:40:00",
+    "temperature": 37.73,
+    "battery": 73.62,
+    "signal_strength": -62.12
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:45:00",
+    "temperature": 36.98,
+    "battery": 72.98,
+    "signal_strength": -60.44
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:50:00",
+    "temperature": 38.13,
+    "battery": 72.83,
+    "signal_strength": -59.72
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:55:00",
+    "temperature": 37.09,
+    "battery": 73.52,
+    "signal_strength": -57.53
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:00:00",
+    "temperature": 38.52,
+    "battery": 74.02,
+    "signal_strength": -55.24
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:05:00",
+    "temperature": 37.09,
+    "battery": 74.4,
+    "signal_strength": -56.25
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:10:00",
+    "temperature": 38.38,
+    "battery": 74.88,
+    "signal_strength": -54.07
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:15:00",
+    "temperature": 39.31,
+    "battery": 74.51,
+    "signal_strength": -52.35
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:20:00",
+    "temperature": 38.13,
+    "battery": 75.11,
+    "signal_strength": -50.2
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:25:00",
+    "temperature": 37.3,
+    "battery": 75.62,
+    "signal_strength": -50.44
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:30:00",
+    "temperature": 36.72,
+    "battery": 76.09,
+    "signal_strength": -52.07
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:35:00",
+    "temperature": 35.29,
+    "battery": 75.6,
+    "signal_strength": -53.1
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:40:00",
+    "temperature": 36.38,
+    "battery": 76.35,
+    "signal_strength": -54.43
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:45:00",
+    "temperature": 36.8,
+    "battery": 76.19,
+    "signal_strength": -51.54
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:50:00",
+    "temperature": 36.91,
+    "battery": 76.89,
+    "signal_strength": -53.85
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T02:55:00",
+    "temperature": 38.32,
+    "battery": 76.38,
+    "signal_strength": -51.07
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T03:00:00",
+    "temperature": 37.62,
+    "battery": 75.75,
+    "signal_strength": -51.46
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T03:05:00",
+    "temperature": 38.31,
+    "battery": 75.45,
+    "signal_strength": -50.82
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T03:10:00",
+    "temperature": 38.34,
+    "battery": 75.27,
+    "signal_strength": -50.36
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T03:15:00",
+    "temperature": 37.6,
+    "battery": 75.6,
+    "signal_strength": -53.35
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T11:05:00",
-    "temperature": 29.91,
-    "battery": 89.69,
-    "signal_strength": -84.08
+    "timestamp": "2026-06-01T00:00:00",
+    "temperature": 66.86,
+    "battery": 79.12,
+    "signal_strength": -52.04
   },
   {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T11:10:00",
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:05:00",
+    "temperature": 65.57,
+    "battery": 79.38,
+    "signal_strength": -53.06
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:10:00",
+    "temperature": 65.01,
+    "battery": 79.94,
+    "signal_strength": -51.74
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:15:00",
+    "temperature": 64.41,
+    "battery": 79.63,
+    "signal_strength": -52.29
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:20:00",
+    "temperature": 64.12,
+    "battery": 79.3,
+    "signal_strength": -54.53
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:25:00",
+    "temperature": 63.88,
+    "battery": 80.0,
+    "signal_strength": -53.47
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:30:00",
+    "temperature": 65.09,
+    "battery": 80.18,
+    "signal_strength": -54.66
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:35:00",
+    "temperature": 65.23,
+    "battery": 79.38,
+    "signal_strength": -55.94
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:40:00",
+    "temperature": 65.02,
+    "battery": 79.51,
+    "signal_strength": -55.01
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:45:00",
+    "temperature": 64.91,
+    "battery": 79.42,
+    "signal_strength": -56.73
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:50:00",
+    "temperature": 64.83,
+    "battery": 80.06,
+    "signal_strength": -54.95
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T00:55:00",
+    "temperature": 63.84,
+    "battery": 79.4,
+    "signal_strength": -54.86
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T01:00:00",
+    "temperature": 64.24,
+    "battery": 79.14,
+    "signal_strength": -52.95
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T01:05:00",
+    "temperature": 64.99,
+    "battery": 79.42,
+    "signal_strength": -54.6
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T01:10:00",
+    "temperature": 64.09,
+    "battery": 78.66,
+    "signal_strength": -56.13
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T01:15:00",
+    "temperature": 64.02,
+    "battery": 79.22,
+    "signal_strength": -58.69
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T01:20:00",
     "temperature": 63.76,
-    "battery": 28.4,
-    "signal_strength": -57.77
+    "battery": 79.43,
+    "signal_strength": -60.52
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T11:15:00",
-    "temperature": 20.0,
-    "battery": 96.82,
-    "signal_strength": -50.93
+    "timestamp": "2026-06-01T01:25:00",
+    "temperature": 64.35,
+    "battery": 79.42,
+    "signal_strength": -62.06
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T11:20:00",
-    "temperature": 58.26,
-    "battery": 11.78,
-    "signal_strength": -85.79
+    "timestamp": "2026-06-01T01:30:00",
+    "temperature": 64.82,
+    "battery": 78.63,
+    "signal_strength": -60.55
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T11:25:00",
-    "temperature": 46.18,
-    "battery": 94.96,
-    "signal_strength": -59.47
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T11:30:00",
-    "temperature": 49.84,
-    "battery": 98.24,
-    "signal_strength": -83.32
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T11:35:00",
-    "temperature": 26.13,
-    "battery": 59.96,
-    "signal_strength": -75.08
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T11:40:00",
-    "temperature": 68.23,
-    "battery": 47.98,
-    "signal_strength": -40.63
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T11:45:00",
-    "temperature": 30.28,
-    "battery": 35.68,
-    "signal_strength": -1.18
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T11:50:00",
-    "temperature": 54.24,
-    "battery": 38.91,
-    "signal_strength": -112.79
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T11:55:00",
-    "temperature": 28.42,
-    "battery": 76.39,
-    "signal_strength": -111.72
+    "timestamp": "2026-06-01T01:35:00",
+    "temperature": 65.63,
+    "battery": 78.0,
+    "signal_strength": -61.0
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T12:00:00",
-    "temperature": 45.2,
-    "battery": 17.82,
-    "signal_strength": -40.18
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T12:05:00",
-    "temperature": 35.76,
-    "battery": 16.79,
-    "signal_strength": -66.08
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T12:10:00",
-    "temperature": 19.75,
-    "battery": 10.97,
-    "signal_strength": -1.05
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T12:15:00",
-    "temperature": 54.51,
-    "battery": 6.43,
-    "signal_strength": -102.01
+    "timestamp": "2026-06-01T01:40:00",
+    "temperature": 64.66,
+    "battery": 78.73,
+    "signal_strength": -60.89
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T12:20:00",
-    "temperature": 66.58,
-    "battery": 63.79,
-    "signal_strength": -48.4
+    "timestamp": "2026-06-01T01:45:00",
+    "temperature": 63.31,
+    "battery": 78.33,
+    "signal_strength": -58.8
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T12:25:00",
-    "temperature": 23.37,
-    "battery": 54.32,
-    "signal_strength": -10.06
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T12:30:00",
-    "temperature": 32.4,
-    "battery": 74.35,
-    "signal_strength": -71.72
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T12:35:00",
-    "temperature": 48.33,
-    "battery": 14.0,
-    "signal_strength": -88.44
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T12:40:00",
-    "temperature": 67.59,
-    "battery": 95.11,
-    "signal_strength": -45.13
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T12:45:00",
-    "temperature": 22.69,
-    "battery": 46.0,
-    "signal_strength": -41.44
+    "timestamp": "2026-06-01T01:50:00",
+    "temperature": 63.18,
+    "battery": 78.81,
+    "signal_strength": -57.79
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T12:50:00",
-    "temperature": 37.46,
-    "battery": 30.21,
-    "signal_strength": -40.51
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T12:55:00",
-    "temperature": 66.24,
-    "battery": 92.6,
-    "signal_strength": -80.47
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T13:00:00",
-    "temperature": 53.45,
-    "battery": 69.21,
-    "signal_strength": -78.82
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T13:05:00",
-    "temperature": 46.99,
-    "battery": 20.81,
-    "signal_strength": -8.44
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T13:10:00",
-    "temperature": 59.48,
-    "battery": 94.37,
-    "signal_strength": -33.0
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T13:15:00",
-    "temperature": 57.71,
-    "battery": 49.78,
-    "signal_strength": -65.35
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T13:20:00",
-    "temperature": 61.83,
-    "battery": 5.33,
-    "signal_strength": -47.11
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T13:25:00",
-    "temperature": 30.09,
-    "battery": 12.85,
-    "signal_strength": -76.77
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T13:30:00",
-    "temperature": 63.65,
-    "battery": 20.7,
-    "signal_strength": -11.92
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T13:35:00",
-    "temperature": 60.89,
-    "battery": 56.27,
-    "signal_strength": -15.25
+    "timestamp": "2026-06-01T01:55:00",
+    "temperature": 64.64,
+    "battery": 78.96,
+    "signal_strength": -55.09
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T13:40:00",
-    "temperature": 18.68,
-    "battery": 42.72,
-    "signal_strength": -83.12
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T13:45:00",
-    "temperature": 49.94,
-    "battery": 2.06,
-    "signal_strength": -60.64
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T13:50:00",
-    "temperature": 23.17,
-    "battery": 96.76,
-    "signal_strength": -60.87
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T13:55:00",
-    "temperature": 35.48,
-    "battery": 35.96,
-    "signal_strength": -25.44
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T14:00:00",
-    "temperature": 61.3,
-    "battery": 28.41,
-    "signal_strength": -107.09
+    "timestamp": "2026-06-01T02:00:00",
+    "temperature": 65.81,
+    "battery": 79.14,
+    "signal_strength": -53.77
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T14:05:00",
-    "temperature": 24.26,
-    "battery": 9.9,
-    "signal_strength": -47.33
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T14:10:00",
-    "temperature": 62.41,
-    "battery": 78.52,
-    "signal_strength": -89.99
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T14:15:00",
-    "temperature": 43.86,
-    "battery": 53.96,
-    "signal_strength": -89.16
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T14:20:00",
-    "temperature": 21.37,
-    "battery": 12.81,
-    "signal_strength": -35.7
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T14:25:00",
-    "temperature": 63.46,
-    "battery": 77.5,
-    "signal_strength": -5.41
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T14:30:00",
-    "temperature": 52.71,
-    "battery": 39.92,
-    "signal_strength": -39.76
+    "timestamp": "2026-06-01T02:05:00",
+    "temperature": 65.82,
+    "battery": 79.67,
+    "signal_strength": -53.48
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T14:35:00",
-    "temperature": 62.91,
-    "battery": 90.18,
-    "signal_strength": -95.39
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T14:40:00",
-    "temperature": 69.19,
-    "battery": 35.89,
-    "signal_strength": -110.0
+    "timestamp": "2026-06-01T02:10:00",
+    "temperature": 67.01,
+    "battery": 80.06,
+    "signal_strength": -53.63
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T14:45:00",
-    "temperature": 49.11,
-    "battery": 75.39,
-    "signal_strength": -90.89
+    "timestamp": "2026-06-01T02:15:00",
+    "temperature": 66.29,
+    "battery": 79.66,
+    "signal_strength": -52.8
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T14:50:00",
-    "temperature": 53.56,
-    "battery": 39.67,
-    "signal_strength": -31.9
+    "timestamp": "2026-06-01T02:20:00",
+    "temperature": 67.09,
+    "battery": 79.69,
+    "signal_strength": -52.04
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T14:55:00",
-    "temperature": 33.05,
-    "battery": 14.71,
-    "signal_strength": -31.93
+    "timestamp": "2026-06-01T02:25:00",
+    "temperature": 66.41,
+    "battery": 79.01,
+    "signal_strength": -53.33
   },
   {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T15:00:00",
-    "temperature": 21.95,
-    "battery": 97.84,
-    "signal_strength": -113.38
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T02:30:00",
+    "temperature": 65.73,
+    "battery": 78.72,
+    "signal_strength": -53.09
   },
   {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T15:05:00",
-    "temperature": 42.86,
-    "battery": 98.56,
-    "signal_strength": -12.86
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T02:35:00",
+    "temperature": 64.65,
+    "battery": 78.29,
+    "signal_strength": -51.93
   },
   {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T15:10:00",
-    "temperature": 59.78,
-    "battery": 39.45,
-    "signal_strength": -36.72
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T02:40:00",
+    "temperature": 65.27,
+    "battery": 77.59,
+    "signal_strength": -52.48
   },
   {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T15:15:00",
-    "temperature": 59.57,
-    "battery": 35.26,
-    "signal_strength": -74.65
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T15:20:00",
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T02:45:00",
     "temperature": 65.4,
-    "battery": 8.01,
-    "signal_strength": -46.33
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T15:25:00",
-    "temperature": 46.07,
-    "battery": 32.09,
-    "signal_strength": -17.68
+    "battery": 77.46,
+    "signal_strength": -54.24
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T15:30:00",
-    "temperature": 59.18,
-    "battery": 12.13,
-    "signal_strength": -17.32
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T15:35:00",
-    "temperature": 53.54,
-    "battery": 22.27,
-    "signal_strength": -70.08
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T15:40:00",
-    "temperature": 22.48,
-    "battery": 88.17,
-    "signal_strength": -30.28
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T15:45:00",
-    "temperature": 64.25,
-    "battery": 11.23,
-    "signal_strength": -14.47
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T15:50:00",
-    "temperature": 45.46,
-    "battery": 50.68,
-    "signal_strength": -32.54
-  },
-  {
-    "device_id": "DEV_002",
-    "timestamp": "2026-06-01T15:55:00",
-    "temperature": 59.95,
-    "battery": 47.53,
-    "signal_strength": -74.95
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T16:00:00",
-    "temperature": 53.4,
-    "battery": 33.13,
-    "signal_strength": -46.16
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T16:05:00",
-    "temperature": 58.19,
-    "battery": 53.79,
-    "signal_strength": -118.76
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T16:10:00",
-    "temperature": 55.11,
-    "battery": 11.92,
-    "signal_strength": -48.08
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T16:15:00",
-    "temperature": 50.98,
-    "battery": 47.9,
-    "signal_strength": -61.9
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T16:20:00",
-    "temperature": 61.48,
-    "battery": 15.78,
-    "signal_strength": -93.76
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-06-01T16:25:00",
-    "temperature": 61.58,
-    "battery": 26.05,
-    "signal_strength": -37.64
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T16:30:00",
-    "temperature": 30.33,
-    "battery": 64.63,
-    "signal_strength": -104.73
+    "timestamp": "2026-06-01T02:50:00",
+    "temperature": 65.16,
+    "battery": 78.11,
+    "signal_strength": -53.74
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T16:35:00",
-    "temperature": 34.95,
-    "battery": 28.61,
-    "signal_strength": -23.07
+    "timestamp": "2026-06-01T02:55:00",
+    "temperature": 65.75,
+    "battery": 78.68,
+    "signal_strength": -52.15
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T03:00:00",
+    "temperature": 65.39,
+    "battery": 77.89,
+    "signal_strength": -53.04
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T03:05:00",
+    "temperature": 66.15,
+    "battery": 78.46,
+    "signal_strength": -50.32
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T03:10:00",
+    "temperature": 65.91,
+    "battery": 78.86,
+    "signal_strength": -50.04
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T03:15:00",
+    "temperature": 66.22,
+    "battery": 78.41,
+    "signal_strength": -51.72
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:00:00",
+    "temperature": 41.2,
+    "battery": 60.86,
+    "signal_strength": -68.56
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:05:00",
+    "temperature": 41.1,
+    "battery": 60.26,
+    "signal_strength": -67.83
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:10:00",
+    "temperature": 39.68,
+    "battery": 60.09,
+    "signal_strength": -67.44
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:15:00",
+    "temperature": 38.26,
+    "battery": 60.32,
+    "signal_strength": -69.63
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:20:00",
+    "temperature": 38.15,
+    "battery": 59.6,
+    "signal_strength": -70.36
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:25:00",
+    "temperature": 37.28,
+    "battery": 59.32,
+    "signal_strength": -68.79
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:30:00",
+    "temperature": 36.92,
+    "battery": 59.72,
+    "signal_strength": -66.8
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:35:00",
+    "temperature": 36.18,
+    "battery": 59.05,
+    "signal_strength": -69.68
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:40:00",
+    "temperature": 36.3,
+    "battery": 59.85,
+    "signal_strength": -70.58
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:45:00",
+    "temperature": 36.75,
+    "battery": 60.3,
+    "signal_strength": -69.67
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:50:00",
+    "temperature": 37.51,
+    "battery": 61.02,
+    "signal_strength": -71.47
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T00:55:00",
+    "temperature": 36.07,
+    "battery": 60.46,
+    "signal_strength": -73.71
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:00:00",
+    "temperature": 36.58,
+    "battery": 60.56,
+    "signal_strength": -75.4
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:05:00",
+    "temperature": 37.18,
+    "battery": 60.99,
+    "signal_strength": -77.39
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:10:00",
+    "temperature": 37.5,
+    "battery": 61.39,
+    "signal_strength": -79.7
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:15:00",
+    "temperature": 38.46,
+    "battery": 62.13,
+    "signal_strength": -82.05
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:20:00",
+    "temperature": 37.04,
+    "battery": 61.83,
+    "signal_strength": -80.99
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:25:00",
+    "temperature": 38.41,
+    "battery": 61.66,
+    "signal_strength": -79.7
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:30:00",
+    "temperature": 37.14,
+    "battery": 61.96,
+    "signal_strength": -78.94
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:35:00",
+    "temperature": 35.95,
+    "battery": 62.4,
+    "signal_strength": -76.84
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:40:00",
+    "temperature": 36.25,
+    "battery": 61.79,
+    "signal_strength": -73.94
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:45:00",
+    "temperature": 37.1,
+    "battery": 61.55,
+    "signal_strength": -74.37
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:50:00",
+    "temperature": 36.71,
+    "battery": 61.56,
+    "signal_strength": -75.32
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T01:55:00",
+    "temperature": 37.76,
+    "battery": 62.08,
+    "signal_strength": -77.69
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:00:00",
+    "temperature": 39.14,
+    "battery": 62.3,
+    "signal_strength": -75.72
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:05:00",
+    "temperature": 39.76,
+    "battery": 62.2,
+    "signal_strength": -74.32
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:10:00",
+    "temperature": 41.16,
+    "battery": 61.83,
+    "signal_strength": -72.47
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:15:00",
+    "temperature": 41.27,
+    "battery": 61.8,
+    "signal_strength": -72.86
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:20:00",
+    "temperature": 41.96,
+    "battery": 61.43,
+    "signal_strength": -70.75
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:25:00",
+    "temperature": 42.95,
+    "battery": 60.77,
+    "signal_strength": -68.46
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:30:00",
+    "temperature": 42.18,
+    "battery": 60.71,
+    "signal_strength": -67.8
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:35:00",
+    "temperature": 41.82,
+    "battery": 59.96,
+    "signal_strength": -65.69
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:40:00",
+    "temperature": 40.87,
+    "battery": 59.5,
+    "signal_strength": -63.9
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:45:00",
+    "temperature": 40.39,
+    "battery": 60.11,
+    "signal_strength": -62.69
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:50:00",
+    "temperature": 39.72,
+    "battery": 59.33,
+    "signal_strength": -60.0
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T02:55:00",
+    "temperature": 38.48,
+    "battery": 59.68,
+    "signal_strength": -60.07
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T03:00:00",
+    "temperature": 39.25,
+    "battery": 59.98,
+    "signal_strength": -59.19
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T03:05:00",
+    "temperature": 39.22,
+    "battery": 60.45,
+    "signal_strength": -61.63
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T03:10:00",
+    "temperature": 38.38,
+    "battery": 60.76,
+    "signal_strength": -62.79
+  },
+  {
+    "device_id": "DEV_005",
+    "timestamp": "2026-06-01T03:15:00",
+    "temperature": 38.62,
+    "battery": 60.72,
+    "signal_strength": -62.6
+  },
+  {
+    "device_id": "DEV_004",
     "timestamp": "2026-06-01T03:30:00",
-    "battery": 88.04,
-    "signal_strength": -9.43
+    "battery": 70.0,
+    "signal_strength": -60.0
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_005",
     "timestamp": "2026-06-01T03:35:00",
-    "temperature": 22.06,
-    "signal_strength": -91.37
+    "temperature": 35.0,
+    "signal_strength": -60.0
   },
   {
     "device_id": "DEV_003",
     "timestamp": "2026-06-01T03:40:00",
-    "temperature": 34.95,
-    "battery": 72.57
+    "temperature": 35.0,
+    "battery": 70.0
   },
   {
     "device_id": "DEV_003",
     "timestamp": "2026-06-01T03:45:00",
-    "signal_strength": -51.45
+    "signal_strength": -60.0
   },
   {
-    "device_id": "DEV_001",
+    "device_id": "DEV_004",
     "timestamp": "2026-06-01T03:50:00",
-    "temperature": 55.71
+    "temperature": 35.0
   },
   {
     "timestamp": "2026-06-01T03:55:00",
-    "temperature": 39.57,
-    "battery": 60.89,
-    "signal_strength": -74.46
+    "temperature": 35.0,
+    "battery": 70.0,
+    "signal_strength": -60.0
   },
   {
     "device_id": "DEV_003",
@@ -1441,28 +1441,28 @@
     "signal_strength": -60.0
   },
   {
-    "device_id": "DEV_005",
+    "device_id": "DEV_003",
     "timestamp": "2026-06-01T04:25:00",
     "temperature": -100.0,
     "battery": 50.0,
     "signal_strength": -60.0
   },
   {
-    "device_id": "DEV_003",
+    "device_id": "DEV_002",
     "timestamp": "2026-06-01T04:30:00",
     "temperature": 40.0,
     "battery": -10.0,
     "signal_strength": -60.0
   },
   {
-    "device_id": "DEV_002",
+    "device_id": "DEV_001",
     "timestamp": "2026-06-01T04:35:00",
     "temperature": 40.0,
     "battery": 150.0,
     "signal_strength": -60.0
   },
   {
-    "device_id": "DEV_001",
+    "device_id": "DEV_002",
     "timestamp": "2026-06-01T04:40:00",
     "temperature": 40.0,
     "battery": 50.0,
@@ -1477,59 +1477,59 @@
   },
   {
     "device_id": "DEV_001",
-    "timestamp": "2026-06-01T03:40:00",
-    "temperature": 68.4,
-    "battery": 41.16,
-    "signal_strength": -28.59
+    "timestamp": "2026-06-01T00:35:00",
+    "temperature": 51.79,
+    "battery": 57.9,
+    "signal_strength": -69.62
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:35:00",
+    "temperature": 47.63,
+    "battery": 58.52,
+    "signal_strength": -67.15
+  },
+  {
+    "device_id": "DEV_001",
+    "timestamp": "2026-06-01T02:50:00",
+    "temperature": 54.97,
+    "battery": 53.98,
+    "signal_strength": -63.07
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-06-01T00:40:00",
+    "temperature": 49.12,
+    "battery": 58.76,
+    "signal_strength": -67.52
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-05-31T15:40:00",
+    "temperature": 35.0,
+    "battery": 70.0,
+    "signal_strength": -60.0
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-05-31T15:50:00",
+    "temperature": 35.0,
+    "battery": 70.0,
+    "signal_strength": -60.0
+  },
+  {
+    "device_id": "DEV_002",
+    "timestamp": "2026-05-31T16:00:00",
+    "temperature": 35.0,
+    "battery": 70.0,
+    "signal_strength": -60.0
   },
   {
     "device_id": "DEV_004",
-    "timestamp": "2026-06-01T02:30:00",
-    "temperature": 48.67,
-    "battery": 54.38,
-    "signal_strength": -47.51
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-06-01T02:10:00",
-    "temperature": 25.89,
-    "battery": 92.28,
-    "signal_strength": -73.98
-  },
-  {
-    "device_id": "DEV_005",
-    "timestamp": "2026-06-01T01:10:00",
-    "temperature": 23.79,
-    "battery": 6.67,
-    "signal_strength": -52.04
-  },
-  {
-    "device_id": "DEV_001",
-    "timestamp": "2026-05-31T15:40:00",
-    "temperature": 33.14,
-    "battery": 88.57,
-    "signal_strength": -15.84
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-05-31T15:50:00",
-    "temperature": 29.86,
-    "battery": 63.89,
-    "signal_strength": -72.56
-  },
-  {
-    "device_id": "DEV_003",
-    "timestamp": "2026-05-31T16:00:00",
-    "temperature": 24.22,
-    "battery": 26.53,
-    "signal_strength": -74.59
-  },
-  {
-    "device_id": "DEV_001",
     "timestamp": "2026-05-31T16:10:00",
-    "temperature": 22.16,
-    "battery": 80.04,
-    "signal_strength": -9.46
+    "temperature": 35.0,
+    "battery": 70.0,
+    "signal_strength": -60.0
   },
   "GARBAGE_LINE_$$##@@",
   "null",
@@ -1559,6 +1559,34 @@
     "timestamp": "2026-06-02T09:25:00",
     "temperature": 40.0,
     "battery": 5.0,
+    "signal_strength": -55.0
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:40:00",
+    "temperature": 25.0,
+    "battery": 90.0,
+    "signal_strength": -50.0
+  },
+  {
+    "device_id": "DEV_003",
+    "timestamp": "2026-06-01T01:45:00",
+    "temperature": 55.0,
+    "battery": 90.0,
+    "signal_strength": -50.0
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T01:40:00",
+    "temperature": 30.0,
+    "battery": 85.0,
+    "signal_strength": -55.0
+  },
+  {
+    "device_id": "DEV_004",
+    "timestamp": "2026-06-01T01:45:00",
+    "temperature": 30.0,
+    "battery": 50.0,
     "signal_strength": -55.0
   }
 ]

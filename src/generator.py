@@ -16,14 +16,12 @@ def generate_timestamp(base, offset_minutes):
     return (base + timedelta(minutes=offset_minutes)).isoformat()
 
 
-def generate_clean_record(device_id, timestamp):
-    return {
-        "device_id": device_id,
-        "timestamp": timestamp,
-        "temperature": round(random.uniform(*NORMAL_TEMP_RANGE), 2),
-        "battery": round(random.uniform(*VALID_RANGES["battery"]), 2),
-        "signal_strength": round(random.uniform(*VALID_RANGES["signal_strength"]), 2),
-    }
+def clamp(value, low, high):
+    return max(low, min(high, value))
+
+
+def drift(value, max_step, low, high):
+    return round(clamp(value + random.uniform(-max_step, max_step), low, high), 2)
 
 
 def inject_messy_records(records):
@@ -39,8 +37,13 @@ def inject_messy_records(records):
         ["device_id"],
     ]
     for offset, missing in enumerate(missing_configs):
-        record = generate_clean_record(random.choice(DEVICES),
-                                       generate_timestamp(base, 210 + offset * 5))
+        record = {
+            "device_id": random.choice(DEVICES),
+            "timestamp": generate_timestamp(base, 210 + offset * 5),
+            "temperature": 35.0,
+            "battery": 70.0,
+            "signal_strength": -60.0,
+        }
         for field in missing:
             del record[field]
         records.append(record)
@@ -67,10 +70,13 @@ def inject_messy_records(records):
 
     # 4. Out-of-order timestamps (4)
     for j in range(4):
-        records.append(generate_clean_record(
-            random.choice(DEVICES),
-            generate_timestamp(base, -500 + j * 10)
-        ))
+        records.append({
+            "device_id": random.choice(DEVICES),
+            "timestamp": generate_timestamp(base, -500 + j * 10),
+            "temperature": 35.0,
+            "battery": 70.0,
+            "signal_strength": -60.0,
+        })
 
     # 5. Malformed / garbage lines (4)
     records.append("GARBAGE_LINE_$$##@@")
@@ -110,17 +116,65 @@ def inject_messy_records(records):
         "signal_strength": -55.0,
     })
 
+    # 7. Rate-of-change anomalies — both values are individually valid, but
+    #    the jump between consecutive readings is physically implausible.
+    #    Timestamps are 5 min apart so the rate check fires.
+    records.append({
+        "device_id": "DEV_003",
+        "timestamp": generate_timestamp(base, 100),
+        "temperature": 25.0,
+        "battery": 90.0,
+        "signal_strength": -50.0,
+    })
+    records.append({
+        "device_id": "DEV_003",
+        "timestamp": generate_timestamp(base, 105),
+        "temperature": 55.0,       # +30°C in 5 min = 6°C/min (threshold: 2)
+        "battery": 90.0,
+        "signal_strength": -50.0,
+    })
+    records.append({
+        "device_id": "DEV_004",
+        "timestamp": generate_timestamp(base, 100),
+        "temperature": 30.0,
+        "battery": 85.0,
+        "signal_strength": -55.0,
+    })
+    records.append({
+        "device_id": "DEV_004",
+        "timestamp": generate_timestamp(base, 105),
+        "temperature": 30.0,
+        "battery": 50.0,           # -35% in 5 min = 7%/min (threshold: 1)
+        "signal_strength": -55.0,
+    })
+
     return records
 
 
-def generate_dataset(path="data/telemetry.json", n_clean=DEFAULT_CLEAN_RECORDS):
+def generate_dataset(path="data/telemetry.json", n_clean=DEFAULT_CLEAN_RECORDS, seed=42):
+    random.seed(seed)
     base = datetime(2026, 6, 1, 0, 0, 0)
     records = []
+    readings_per_device = n_clean // len(DEVICES)
 
-    for i in range(n_clean):
-        device = random.choice(DEVICES)
-        timestamp = generate_timestamp(base, i * NORMAL_INTERVAL_MINUTES)
-        records.append(generate_clean_record(device, timestamp))
+    for device_id in DEVICES:
+        temp = random.uniform(*NORMAL_TEMP_RANGE)
+        battery = random.uniform(60, 95)
+        signal = random.uniform(-80, -40)
+
+        for i in range(readings_per_device):
+            timestamp = generate_timestamp(base, i * NORMAL_INTERVAL_MINUTES)
+            temp = drift(temp, 1.5, *NORMAL_TEMP_RANGE)
+            battery = drift(battery, 0.8, *VALID_RANGES["battery"])
+            signal = drift(signal, 3.0, *VALID_RANGES["signal_strength"])
+
+            records.append({
+                "device_id": device_id,
+                "timestamp": timestamp,
+                "temperature": temp,
+                "battery": battery,
+                "signal_strength": signal,
+            })
 
     records = inject_messy_records(records)
 
