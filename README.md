@@ -30,6 +30,7 @@ temperature, battery level, and signal strength — the pipeline:
 ```
 .
 ├── main.py                  # Entry point — ties the pipeline together
+├── dashboard.html           # Self-contained visualization (Chart.js)
 ├── requirements.txt
 ├── src/
 │   ├── __init__.py
@@ -87,6 +88,24 @@ To run the tests:
 ```bash
 python -m pytest tests/
 ```
+
+### Visualization
+
+After running the pipeline, open the dashboard to explore per-device charts
+and alerts:
+
+```bash
+# Serve the project directory (needed because fetch won't work on file://)
+python -m http.server 8000
+# Then open http://localhost:8000/dashboard.html
+```
+
+Alternatively, open `dashboard.html` directly in a browser and use the file
+input to load `output/results.json` manually.
+
+The dashboard shows temperature, battery, and signal strength over time for
+each device, with alert markers on anomalous readings and stat cards
+summarizing the device's health.
 
 ---
 

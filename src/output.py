@@ -2,14 +2,25 @@ import json
 import os
 
 
-def write_output(summary, alerts, path="output/results.json"):
-    """
-    Write the per-device summary and alerts to a single structured JSON file.
-    """
+def write_output(summary, alerts, grouped, path="output/results.json"):
     os.makedirs(os.path.dirname(path), exist_ok=True)
+
+    clean_series = {}
+    for device_id, records in grouped.items():
+        clean_series[device_id] = [
+            {
+                "timestamp": r["timestamp"],
+                "temperature": r["temperature"],
+                "battery": r["battery"],
+                "signal_strength": r["signal_strength"],
+            }
+            for r in records
+        ]
+
     payload = {
         "device_summary": summary,
         "alerts": alerts,
+        "clean_series": clean_series,
     }
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)

@@ -27,7 +27,7 @@ def run_pipeline(input_path, output_path):
     summary = aggregate_records(grouped)
     alerts = check_alerts(grouped)
 
-    out_path = write_output(summary, alerts, output_path)
+    out_path = write_output(summary, alerts, grouped, output_path)
     print_run_summary(stats, summary, alerts)
     print(f"\nStructured results written to: {out_path}")
 

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telemetry Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; padding: 24px; }
+  h1 { font-size: 1.5rem; margin-bottom: 16px; }
+  .controls { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+  select, button { padding: 8px 14px; border-radius: 6px; border: 1px solid #334155; background: #1e293b; color: #e2e8f0; font-size: 0.9rem; cursor: pointer; }
+  select:hover, button:hover { border-color: #60a5fa; }
+  .fallback { font-size: 0.8rem; color: #94a3b8; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .stat-card { background: #1e293b; border-radius: 8px; padding: 14px; border: 1px solid #334155; }
+  .stat-card .label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-card .value { font-size: 1.4rem; font-weight: 600; margin-top: 4px; color: #f1f5f9; }
+  .charts { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .chart-box { background: #1e293b; border-radius: 8px; padding: 16px; border: 1px solid #334155; }
+  .chart-box h3 { font-size: 0.9rem; margin-bottom: 10px; color: #94a3b8; }
+  canvas { width: 100% !important; }
+  .alerts-section { margin-top: 24px; }
+  .alerts-section h3 { font-size: 0.9rem; color: #94a3b8; margin-bottom: 10px; }
+  .alert-item { background: #1e293b; border-left: 3px solid #f59e0b; border-radius: 4px; padding: 10px 14px; margin-bottom: 8px; font-size: 0.85rem; }
+  .alert-item.critical { border-left-color: #ef4444; }
+  .alert-item .alert-type { font-weight: 600; color: #fbbf24; }
+  .alert-item.critical .alert-type { color: #f87171; }
+  .alert-detail { color: #94a3b8; margin-top: 2px; }
+  #message { text-align: center; padding: 60px; color: #64748b; font-size: 1.1rem; }
+</style>
+</head>
+<body>
+
+<h1>Telemetry Dashboard</h1>
+
+<div class="controls">
+  <select id="device-select" disabled><option>Loading...</option></select>
+  <span class="fallback">
+    If fetch fails (CORS), load manually:
+    <input type="file" id="file-input" accept=".json">
+  </span>
+</div>
+
+<div id="message">Loading results...</div>
+
+<div id="dashboard" style="display:none;">
+  <div class="stats" id="stats"></div>
+  <div class="charts">
+    <div class="chart-box"><h3>Temperature (&deg;C)</h3><canvas id="chart-temp"></canvas></div>
+    <div class="chart-box"><h3>Battery (%)</h3><canvas id="chart-batt"></canvas></div>
+    <div class="chart-box"><h3>Signal Strength (dBm)</h3><canvas id="chart-sig"></canvas></div>
+  </div>
+  <div class="alerts-section">
+    <h3>Alerts</h3>
+    <div id="alerts-list"></div>
+  </div>
+</div>
+
+<script>
+let DATA = null;
+let charts = {};
+
+function init(data) {
+  DATA = data;
+  const sel = document.getElementById('device-select');
+  sel.innerHTML = '';
+  sel.disabled = false;
+  Object.keys(data.clean_series).sort().forEach(id => {
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = id;
+    sel.appendChild(opt);
+  });
+  sel.addEventListener('change', () => render(sel.value));
+  document.getElementById('message').style.display = 'none';
+  document.getElementById('dashboard').style.display = 'block';
+  render(sel.value);
+}
+
+function render(deviceId) {
+  renderStats(deviceId);
+  renderCharts(deviceId);
+  renderAlerts(deviceId);
+}
+
+function renderStats(deviceId) {
+  const s = DATA.device_summary[deviceId];
+  if (!s) return;
+  const items = [
+    ['Readings', s.reading_count],
+    ['Min Temp', s.min_temperature + ' °C'],
+    ['Avg Temp', s.avg_temperature + ' °C'],
+    ['Max Temp', s.max_temperature + ' °C'],
+    ['Latest Battery', s.latest_battery + '%'],
+    ['Time Span', s.time_span_minutes + ' min'],
+  ];
+  document.getElementById('stats').innerHTML = items.map(([label, value]) =>
+    `<div class="stat-card"><div class="label">${label}</div><div class="value">${value}</div></div>`
+  ).join('');
+}
+
+function makeChart(canvasId, labels, values, color, alertPoints) {
+  if (charts[canvasId]) charts[canvasId].destroy();
+
+  const datasets = [{
+    label: canvasId.replace('chart-', ''),
+    data: values,
+    borderColor: color,
+    backgroundColor: color + '20',
+    borderWidth: 2,
+    pointRadius: 2,
+    tension: 0.3,
+    fill: true,
+  }];
+
+  if (alertPoints.length > 0) {
+    const sparse = new Array(labels.length).fill(null);
+    alertPoints.forEach(p => { sparse[p.x] = p.y; });
+    datasets.push({
+      label: 'Alert',
+      data: sparse,
+      pointRadius: 8,
+      pointStyle: 'triangle',
+      pointBackgroundColor: '#ef4444',
+      pointBorderColor: '#ef4444',
+      borderWidth: 0,
+      showLine: false,
+    });
+  }
+
+  charts[canvasId] = new Chart(document.getElementById(canvasId), {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      spanGaps: false,
+      plugins: {
+        legend: { display: alertPoints.length > 0, labels: { color: '#94a3b8' } },
+      },
+      scales: {
+        x: {
+          ticks: { color: '#64748b', maxTicksLimit: 12, maxRotation: 45 },
+          grid: { color: '#1e293b' },
+        },
+        y: {
+          ticks: { color: '#64748b' },
+          grid: { color: '#334155' },
+        }
+      }
+    }
+  });
+}
+
+function renderCharts(deviceId) {
+  const series = DATA.clean_series[deviceId];
+  if (!series) return;
+
+  const labels = series.map(r => r.timestamp.replace('T', ' ').slice(0, 16));
+  const temps = series.map(r => r.temperature);
+  const batts = series.map(r => r.battery);
+  const sigs = series.map(r => r.signal_strength);
+
+  const deviceAlerts = DATA.alerts.filter(a => a.device_id === deviceId);
+
+  const tempAlerts = [];
+  const battAlerts = [];
+  deviceAlerts.forEach(a => {
+    if (a.alert_type === 'temperature_out_of_range') {
+      series.forEach((r, i) => {
+        if (r.temperature === a.details.max_temp || r.temperature === a.details.min_temp) {
+          tempAlerts.push({ x: i, y: r.temperature });
+        }
+      });
+    }
+    if (a.alert_type === 'anomalous_temp_change') {
+      series.forEach((r, i) => {
+        if (r.temperature === a.details.to) {
+          tempAlerts.push({ x: i, y: r.temperature });
+        }
+      });
+    }
+    if (a.alert_type === 'low_battery') {
+      const last = series[series.length - 1];
+      battAlerts.push({ x: series.length - 1, y: last.battery });
+    }
+    if (a.alert_type === 'anomalous_battery_change') {
+      series.forEach((r, i) => {
+        if (r.battery === a.details.to) {
+          battAlerts.push({ x: i, y: r.battery });
+        }
+      });
+    }
+  });
+
+  makeChart('chart-temp', labels, temps, '#60a5fa', tempAlerts);
+  makeChart('chart-batt', labels, batts, '#34d399', battAlerts);
+  makeChart('chart-sig', labels, sigs, '#a78bfa', []);
+}
+
+function renderAlerts(deviceId) {
+  const deviceAlerts = DATA.alerts.filter(a => a.device_id === deviceId);
+  const container = document.getElementById('alerts-list');
+
+  if (deviceAlerts.length === 0) {
+    container.innerHTML = '<div style="color:#64748b;font-size:0.85rem;">No alerts for this device.</div>';
+    return;
+  }
+
+  const critical = ['low_battery', 'device_offline', 'temperature_out_of_range'];
+  container.innerHTML = deviceAlerts.map(a => {
+    const cls = critical.includes(a.alert_type) ? 'alert-item critical' : 'alert-item';
+    const details = Object.entries(a.details).map(([k, v]) => `${k}: ${v}`).join(', ');
+    return `<div class="${cls}"><span class="alert-type">${a.alert_type}</span><div class="alert-detail">${details}</div></div>`;
+  }).join('');
+}
+
+// Load data
+fetch('./output/results.json')
+  .then(r => r.json())
+  .then(init)
+  .catch(() => {
+    document.getElementById('message').textContent = 'Could not fetch results.json — use the file input above to load it manually.';
+  });
+
+document.getElementById('file-input').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => init(JSON.parse(reader.result));
+  reader.readAsText(file);
+});
+</script>
+
+</body>
+</html>
