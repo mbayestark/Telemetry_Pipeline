@@ -100,6 +100,9 @@ python -m http.server 8000
 # Then open http://localhost:8000/dashboard.html
 ```
 
+A live version is also available on GitHub Pages:
+**https://mbayestark.github.io/Telemetry_Pipeline/dashboard.html**
+
 Alternatively, open `dashboard.html` directly in a browser and use the file
 input to load `output/results.json` manually.
 
