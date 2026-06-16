@@ -3,13 +3,13 @@ import random
 import os
 from datetime import datetime, timedelta
 
-DEVICES = ["DEV_001", "DEV_002", "DEV_003", "DEV_004", "DEV_005"]
-
-VALID_RANGES = {
-    "temperature": (18, 70),
-    "battery": (0, 100),
-    "signal_strength": (-120, 0)
-}
+from src.config import (
+    DEVICES,
+    VALID_RANGES,
+    NORMAL_TEMP_RANGE,
+    DEFAULT_CLEAN_RECORDS,
+    NORMAL_INTERVAL_MINUTES,
+)
 
 
 def generate_timestamp(base, offset_minutes):
@@ -20,9 +20,9 @@ def generate_clean_record(device_id, timestamp):
     return {
         "device_id": device_id,
         "timestamp": timestamp,
-        "temperature": round(random.uniform(18, 70), 2),
-        "battery": round(random.uniform(0, 100), 2),
-        "signal_strength": round(random.uniform(-120, 0), 2)
+        "temperature": round(random.uniform(*NORMAL_TEMP_RANGE), 2),
+        "battery": round(random.uniform(*VALID_RANGES["battery"]), 2),
+        "signal_strength": round(random.uniform(*VALID_RANGES["signal_strength"]), 2),
     }
 
 
@@ -39,13 +39,8 @@ def inject_messy_records(records):
         ["device_id"],
     ]
     for offset, missing in enumerate(missing_configs):
-        record = {
-            "device_id": random.choice(DEVICES),
-            "timestamp": generate_timestamp(base, 210 + offset * 5),
-            "temperature": round(random.uniform(18, 70), 2),
-            "battery": round(random.uniform(0, 100), 2),
-            "signal_strength": round(random.uniform(-120, 0), 2)
-        }
+        record = generate_clean_record(random.choice(DEVICES),
+                                       generate_timestamp(base, 210 + offset * 5))
         for field in missing:
             del record[field]
         records.append(record)
@@ -63,24 +58,21 @@ def inject_messy_records(records):
         records.append({
             "device_id": random.choice(DEVICES),
             "timestamp": generate_timestamp(base, 260 + offset * 5),
-            **values
+            **values,
         })
 
-    # 3. Duplicate records (4 records) — only duplicate clean dict records
+    # 3. Duplicate records (4) — only duplicate clean dict records
     for i in random.sample(range(50), 4):
         records.append(records[i].copy())
 
-    # 4. Out-of-order timestamps (4 records)
+    # 4. Out-of-order timestamps (4)
     for j in range(4):
-        records.append({
-            "device_id": random.choice(DEVICES),
-            "timestamp": generate_timestamp(base, -500 + j * 10),
-            "temperature": round(random.uniform(18, 70), 2),
-            "battery": round(random.uniform(0, 100), 2),
-            "signal_strength": round(random.uniform(-120, 0), 2)
-        })
+        records.append(generate_clean_record(
+            random.choice(DEVICES),
+            generate_timestamp(base, -500 + j * 10)
+        ))
 
-    # 5. Malformed / garbage lines (4 records)
+    # 5. Malformed / garbage lines (4)
     records.append("GARBAGE_LINE_$$##@@")
     records.append("null")
     records.append({
@@ -88,26 +80,46 @@ def inject_messy_records(records):
         "timestamp": "not-a-timestamp",
         "temperature": "hot",
         "battery": "full",
-        "signal_strength": "strong"
+        "signal_strength": "strong",
     })
     records.append({
         "device_id": "DEV_003",
         "timestamp": "not-a-timestamp",
         "temperature": "N/A",
         "battery": None,
-        "signal_strength": -60.0
+        "signal_strength": -60.0,
+    })
+
+    # 6. Anomalous-but-VALID readings — these pass validation but should trip
+    #    alerts: a dangerously hot reading and a critically low LATEST battery.
+    #    This proves alerting fires on real, in-range data, not just on garbage.
+    #    Late timestamps (offset 2000+) ensure the battery record is the most
+    #    recent for its device, so the "latest battery" check sees it.
+    records.append({
+        "device_id": "DEV_001",
+        "timestamp": generate_timestamp(base, 2000),
+        "temperature": 78.0,   # above TEMP_HIGH_THRESHOLD, within VALID_RANGES
+        "battery": 60.0,
+        "signal_strength": -50.0,
+    })
+    records.append({
+        "device_id": "DEV_002",
+        "timestamp": generate_timestamp(base, 2005),
+        "temperature": 40.0,
+        "battery": 5.0,        # below BATTERY_THRESHOLD — critical latest battery
+        "signal_strength": -55.0,
     })
 
     return records
 
 
-def generate_dataset(path="data/telemetry.json", n_clean=200):
+def generate_dataset(path="data/telemetry.json", n_clean=DEFAULT_CLEAN_RECORDS):
     base = datetime(2026, 6, 1, 0, 0, 0)
     records = []
 
     for i in range(n_clean):
         device = random.choice(DEVICES)
-        timestamp = generate_timestamp(base, i * 5)
+        timestamp = generate_timestamp(base, i * NORMAL_INTERVAL_MINUTES)
         records.append(generate_clean_record(device, timestamp))
 
     records = inject_messy_records(records)

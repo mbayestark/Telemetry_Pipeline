@@ -1,0 +1,113 @@
+{
+  "device_summary": {
+    "DEV_002": {
+      "reading_count": 37,
+      "min_temperature": 19.42,
+      "max_temperature": 68.6,
+      "avg_temperature": 44.24,
+      "latest_battery": 5.0,
+      "first_reading": "2026-06-01T00:00:00",
+      "last_reading": "2026-06-02T09:25:00",
+      "time_span_minutes": 2005.0
+    },
+    "DEV_001": {
+      "reading_count": 43,
+      "min_temperature": 18.71,
+      "max_temperature": 78.0,
+      "avg_temperature": 44.79,
+      "latest_battery": 60.0,
+      "first_reading": "2026-05-31T15:40:00",
+      "last_reading": "2026-06-02T09:20:00",
+      "time_span_minutes": 2500.0
+    },
+    "DEV_004": {
+      "reading_count": 37,
+      "min_temperature": 18.68,
+      "max_temperature": 66.58,
+      "avg_temperature": 41.7,
+      "latest_battery": 28.61,
+      "first_reading": "2026-06-01T00:15:00",
+      "last_reading": "2026-06-01T16:35:00",
+      "time_span_minutes": 980.0
+    },
+    "DEV_005": {
+      "reading_count": 47,
+      "min_temperature": 18.24,
+      "max_temperature": 69.32,
+      "avg_temperature": 48.35,
+      "latest_battery": 11.92,
+      "first_reading": "2026-06-01T00:20:00",
+      "last_reading": "2026-06-01T16:10:00",
+      "time_span_minutes": 950.0
+    },
+    "DEV_003": {
+      "reading_count": 42,
+      "min_temperature": 18.82,
+      "max_temperature": 65.7,
+      "avg_temperature": 44.25,
+      "latest_battery": 64.63,
+      "first_reading": "2026-05-31T15:50:00",
+      "last_reading": "2026-06-01T16:30:00",
+      "time_span_minutes": 1480.0
+    }
+  },
+  "alerts": [
+    {
+      "device_id": "DEV_002",
+      "alert_type": "low_battery",
+      "details": {
+        "latest_battery": 5.0
+      }
+    },
+    {
+      "device_id": "DEV_002",
+      "alert_type": "reporting_gap",
+      "details": {
+        "max_gap_minutes": 1050.0
+      }
+    },
+    {
+      "device_id": "DEV_001",
+      "alert_type": "temperature_out_of_range",
+      "details": {
+        "min_temp": 18.71,
+        "max_temp": 78.0
+      }
+    },
+    {
+      "device_id": "DEV_001",
+      "alert_type": "reporting_gap",
+      "details": {
+        "max_gap_minutes": 1015.0
+      }
+    },
+    {
+      "device_id": "DEV_004",
+      "alert_type": "reporting_gap",
+      "details": {
+        "max_gap_minutes": 135.0
+      }
+    },
+    {
+      "device_id": "DEV_005",
+      "alert_type": "low_battery",
+      "details": {
+        "latest_battery": 11.92
+      }
+    },
+    {
+      "device_id": "DEV_005",
+      "alert_type": "reporting_gap",
+      "details": {
+        "max_gap_minutes": 55.0
+      }
+    },
+    {
+      "device_id": "DEV_003",
+      "alert_type": "reporting_gap",
+      "details": {
+        "max_gap_minutes": 510.0
+      }
+    }
+  ]
+}
