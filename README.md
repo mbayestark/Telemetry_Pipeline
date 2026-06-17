@@ -121,8 +121,9 @@ from the same device are correlated, not random. This makes rate-of-change
 alerting meaningful: a sudden spike stands out against a smooth baseline.
 
 On top of the clean data, the generator deliberately injects ~30 problem
-records so the pipeline's handling is visible. Each injected category and how
-the pipeline handles it:
+records. Of those, ~20 are genuinely invalid (rejected by the validator),
+while ~10 are valid-but-anomalous — they pass validation but trigger alerts.
+Each injected category and how the pipeline handles it:
 
 | Injected condition        | Example                                      | How the pipeline handles it                          |
 |---------------------------|----------------------------------------------|------------------------------------------------------|
@@ -243,10 +244,18 @@ The full per-device summary and the complete alert list are written to
 - **True streaming** ingest (line-by-line or a queue) with incremental
   aggregates, instead of a single batch pass.
 - **Persistence** to a small database (SQLite) so history survives across runs.
-- **A dashboard** charting each device's readings over time with alerts marked.
 - **Scaling** to many devices: partition by device, process in parallel.
-- **Richer alerts**: severity levels, "device offline" vs "temporary gap",
-  and de-duplicating repeated alerts for the same ongoing condition.
+- **Alert deduplication**: suppress repeated alerts for the same ongoing
+  condition across runs, firing only on state transitions.
+- **Severity levels**: distinguish warning vs critical (e.g. battery at 15%
+  vs battery at 3%) so downstream consumers can prioritize.
+- **Statistical anomaly detection**: replace fixed thresholds with per-device
+  baselines — track rolling mean and standard deviation, flag readings that
+  deviate beyond 3σ. This catches slow sensor drift and device-specific
+  anomalies that static thresholds miss.
+- **Predictive alerts**: use trend extrapolation (e.g. linear regression over
+  the last N readings) to predict when battery will hit critical or when
+  temperature will leave the safe band — alerting before a problem, not after.
 
 ---
 
@@ -270,9 +279,11 @@ The pipeline flows through five stages, each in its own module:
 
 The generator injects ~30 problem records into ~200 clean ones: missing fields,
 wrong types, out-of-range values, null device IDs, bad timestamps, garbage
-strings, exact duplicates, and rate-of-change spikes. The validator catches
-each invalid category with a specific rejection reason, so the run summary
-shows *why* records were dropped, not just how many. Checks run cheapest-first
+strings, exact duplicates, and rate-of-change spikes. Of those ~30, about 20
+are genuinely invalid (rejected), while ~10 are valid-but-anomalous — they
+pass validation but trigger alerts, proving the alerting layer works on real
+data. The validator catches each invalid category with a specific rejection
+reason, so the run summary shows *why* records were dropped, not just how many. Checks run cheapest-first
 (is-it-a-dict before field access) so a garbage string never crashes a
 downstream check.
 
@@ -303,17 +314,21 @@ Two key design choices make the alerting layer meaningful:
 ### What I would do next
 
 With more time I would add true streaming ingest, SQLite persistence so history
-survives across runs, a small dashboard charting readings over time with alerts
-marked, and richer alert semantics (severity levels, alert deduplication).
+survives across runs, alert deduplication (fire only on state transitions, not
+every run), and severity levels (warning vs critical).
 
 ---
 
 ## AI tools used
 
-An AI coding assistant (Claude) was used as a pair-programming aid to discuss
-design, review my code, and catch edge cases. All design decisions, the
-validation logic, and the final structure were worked through and understood by
-me; I can explain any part of the submission.
+An AI coding assistant (Claude Code) was used throughout this project. The
+core pipeline — data generation, validation, aggregation, basic alerting, and
+structured output — was written by me, with Claude used as a pair-programming
+aid to discuss design and catch edge cases. The later improvements —
+rate-of-change detection, device-offline vs recovered gap distinction,
+realistic correlated data generation, the interactive dashboard, and project
+restructuring — were implemented collaboratively with Claude Code taking a
+larger role in the coding. I can explain any part of the submission.
 
 ## Effort
 
