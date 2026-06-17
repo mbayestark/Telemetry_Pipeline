@@ -332,5 +332,5 @@ larger role in the coding. I can explain any part of the submission.
 
 ## Effort
 
-Roughly **3 hours** end to end, including design, implementation,
+Roughly **5 hours** end to end, including design, implementation,
 testing, and documentation.
